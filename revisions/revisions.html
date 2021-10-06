@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Révisions HTML</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Révisions HTML</h1>
+        <h2>Les titres et paragraphes</h2>
+        <p>Pour afficher des titres, j'utilises les éléments 'h' allant de h1 (titre le plus grand) à h6 (titre le plus petit).</p>
+        <p>Pour les paragraphes, j'utilise l'élément 'p'.</p>
+
+        <h2>Un premier style en HTML</h2>
+        <p>On peut mettre du texte en gras avec la l'élément <strong>strong</strong> et on peut mettre du texte en italique avec l'élément <em>em</em></p>
+        <p>On peut faire un saut de ligne avec l'élément br</p>
+        <p>On peut afficher un trait avec l'élément hr</p>
+        <hr>
+
+        <h2>L'imbrication</h2>
+        <p>Des éléments peuvent s'imbriquer les uns dans les autres. Les éléments qui peuvent recevoir d'autres éléments en enfants sont des éléments qui contiennent une balise ouvrante et une balise fermante.</p>
+        <p>Les éléments qui ont des balises auto-fermantes ne peuvent pas avoir d'éléments enfants. On dit que ce sont des éléments vides.</p>
+
+        <h2>Les listes</h2>
+        <h3>Les listes ordonnées</h3>
+        <p>Les listes ordonnées sont des listes qui permettent d'afficher un numéro devant chaque élément de la liste.
+            On utilise l'élément ol pour créer cette liste. Et chaque information présente dans la liste doit être écrite dans un élément li.
+        </p>
+
+        <h4>Exemple: </h4>
+        <ol>
+            <li>Information 1</li>
+            <li>Information 2</li>
+            <li>Information 3</li>
+        </ol>
+
+        <h3>Les listes non ordonnées</h3>
+        <p>Les listes non ordonnées sont des listes qui affichent uniquement un point devant chaque information de la liste.
+            On utilise l'élément ul pour créer cette liste. Et chaque information présente dans la liste doit être être écrite dans un élément li.
+        </p>
+
+        <h4>Exemple: </h4>
+
+        <ul>
+            <li>Une information</li>
+            <li>Une autre information</li>
+            <li>Une troisième information</li>
+        </ul>
+
+        <h2>Les liens</h2>
+        <h3>L'élément à utiliser</h3>
+        <p>Un lien est un élément cliquable qui nous permet de naviguer sur le site.</p>
+        <p>Avec un lien, on peut:</p>
+        <ul>
+            <li>Se rendre sur une autre page du site,</li>
+            <li>se rendre sur une autre partie de la même page (ancre),</li>
+            <li>se rendre sur un autre site,</li>
+            <li>afficher un fichier et permettre à l'utilisateur de le télécharger.</li>
+        </ul>
+
+        <p>Pour afficher un lien, on doit utiliser l'élément 'a'. Cet élément a un attribut particulier: <strong>href</strong>.</p>
+        <p>Exemple: &lt;a href=""&gt;&lt;/a&gt; </p>
+        <p>Cliquez <a href="">ici</a> pour vous rendre sur l'autre page.</p>
+        
+        <h3>La navigation parmi les dossiers</h3>
+        <p>Pour afficher un fichier qui est dans dossier différent, on doit naviguer parmi les dossier.</p>
+        <p>Pour ce faire, si on se rendre sur la page 2 qui est dans le dossier pages, on écrit le href de la façon suivante: href="pages/page2.html".</p>
+        <p>Si on est sur la page 2 qui est dans le dossier pages et qu'on veut se rendre sur l'index, on écrit le href de la façon suivante: href="../index.html".</p>
+        <p>On doit écrire autant de fois "../" qu'on doit remonter de dossier. Exemple: Si on doit remonter de 3 dossiers, on écrit: "../../../"</p>
+
+        <h2>Les images</h2>
+        <p>Pour afficher une image sur le site, on doit utiliser la balise img. Elle s'écrit de la façon suivante: &lt;img src="" alt=""/&gt; </p>
+        <p>L'élément img possède 2 attributs spécifiques.</p>
+        <p>Le premier est 'src'. src permet d'écrire le chemin vers l'image qu'on veut afficher. Il fonctionne comme 'href'. </p>
+        <p>Le deuxième est 'alt'. alt permet de définir un titre à l'image. Ce titre s'affiche uniquement si l'image ne s'affiche pas ou pour les non voyants.</p>
+        <img src="img/img.jpg" alt="Ma première image">
+        <p>Une image peut être cliquable pour emmener sur une autre page ou un autre site en plaçant l'élément img dans un élément a.</p>
+        <p>
+            <a href="https://developer.mozilla.org/fr/docs/Web/HTML"><img src="img/html.png" alt="Logo HTML"></a>
+        </p>
+
+        <hr>
+
+        <h2>Exercice image</h2>
+        <p>Dans le dossier html-wf3, vous devez créer un dossier img. Dans ce dossier img vous déposerez les fichiers html.png et css.jpg</p>
+        <p>Dans le dossier img, vous devez créer un dossier autres. Dans ce dossier autres vous déposerez le fichier js.png</p>
+        <p>Vous devez afficher les 3 images sur la page index.html</p>
+
+        <hr>
+
+        <h2>Les tableaux</h2>
+
+        <p>Pour faire un tableau on a besoin de plusieurs éléments: table, thead, tbody, tfoot, th, td, tr</p>
+
+        <h3>Table</h3>
+        <p>Table c'est l'élément principal qui définit les contours du tableau. Si on ne met pas cet élément, on ne peut pas avoir de tableau.</p>
+
+        <h3>Les 3 parties du tableau</h3>
+        <p>Notre tableau se divise en 3 parties:</p>
+        <ol>
+            <li>thead: C'est l'en-tête du tableau. <p>C'est l'endroit où on met les titres de nos colonnes.</p></li>
+            <li>tbody: C'est le corps du tableau. <p>C'est l'endroit où l'on affiche toutes les données.</p></li>
+            <li>tfoot: C'est le pied de page du tableau. <p>C'est l'endroit où on affiche un résumé des informations par exemple un total.</p></li>
+        </ol>
+
+        <h3>Les lignes des tableaux</h3>
+        <p>Pour ajouter une ligne à un tableau, on utilise l'élément tr (table row qui signifie ligne de tableau)</p>
+
+        <h3>Les cellules des tableaux</h3>
+        <p>On a 2 types de cellules. Les premières et les classiques sont les éléments td. Dans ce td on écrit l'information que l'on veut afficher dans le tableau.</p>
+        <p>L'autre type de cellule c'est l'élément th. On s'en sert plus pour les titres de colonnes et de ligne car il affiche l'information en gras.</p>
+
+        <h4>Exemple:</h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du produit</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pomme</td>
+                    <td>3€/kg</td>
+                </tr>
+                <tr>
+                    <td>Fraises</td>
+                    <td>6€ la barquette</td>
+                </tr>
+                <tr>
+                    <td>Citron</td>
+                    <td>2,50€/kg</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td>11,50€</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p>L'ordre des éléments est toujours le même. On écrit en premier l'élément table qui contient toujours les éléments thead, tbody et tfoot.</p>
+        <p>Dans les éléments thead, tbody et tfoot, on retrouve toujours un ou plusieurs éléments tr.</p>
+        <p>C'est dans les éléments tr que l'on trouve les éléments th et td.</p>
+        <p>C'est dans les éléments th et td qu'on retrouve les informations qu'on écrit dans le tableau(pomme, citron, 3€/kg, ...).</p>
+
+    </body>
+</html>

@@ -1,0 +1,164 @@
+/* 
+    nomElement{
+        propriete:valeur;
+        propriete2:valeur;
+    } 
+*/
+/* Ceci est un commentaire */
+/*  
+    * est le selecteur global. 
+    Il sélectionne tous les éléments 
+    pour modifier le style de l'ensemble du document. 
+*/
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* 
+    Le sélecteur d'élément permet de sélectionner 
+    tous les éléments qui ont le même nom 
+*/
+h1{
+    color:blue;
+}
+h2{
+    color:green;
+}
+/* 
+    On peut sélectionner une class en l'appelant 
+    avec un point devant un nom de class existant dans le html 
+    exemple: .listes 
+*/
+.listes{
+    background-color:lightgray;
+}
+/* 
+    On peut sélectionner un id en l'appelant 
+    avec un # devant le nom de l'id existant dans le html 
+    exemple: #tableCourses
+*/
+#tableCourses{
+    border: 1px solid black;
+}
+/* 
+    Le poids des règles impose qu'un id 
+    est plus important qu'une class
+    qui est plus importante qu'un élément.
+    Le style de l'id sera toujours présent avant les autres.
+ */
+#ancre{
+    color:black;
+}
+.h1{
+    color:lime;
+}
+
+/* 
+    En css il y a une règle pour gérer l'ordre d'écriture
+    des modifications de propriétés.
+    Si on modifie plusieurs fois une propriété pour un même élément,
+    C'est la propriété lue en dernier qui est prise en compte.
+    h1{
+        color:red;
+    } 
+*/
+/* 
+    Le sélecteur d'enfant: parent enfant 
+    permet de sélectionner tous les enfants, 
+    petits-enfants et autres qui sont dans l'élément parent.
+    Dans ce cas, les p qui sont dans le ol sont sélectionnées
+    et les p qui sont dans les li  sont également sélectionnés.
+*/
+ol li{
+    color:olive;
+}
+ol p{
+    color:tomato;
+}
+/*
+    Le sélecteur d'enfant direct parent>enfant
+    permet de sélectionner uniquement les enfants direct du parent.
+    Dans ce cas, les p qui sont dans le ol sont sélectionnées
+    mais les p qui sont dans les li ne sont pas sélectionnés.
+*/
+ol>p{
+    color:peru;
+}
+ol>li{
+    color:palevioletred;
+}
+
+/*
+    Le + permet de sélectionner le voisin direct 
+    d'un élément ou d'une class ou autre. On l'écrit:
+    voisin+voisin
+*/
+h2+h3{
+    color:teal;
+}
+/*
+    La ~(tilde) permet de sélectionner tous les voisins 
+    d'un élément ou d'une class ou autre. On l'écrit:
+    voisin~voisin
+*/
+h2~h3{
+    color:yellow;
+}
+/* ol li p~*{
+    font-size:50px;
+} */
+
+/* ol~*{
+    color:saddlebrown;
+} */
+
+/* h2+*{
+    background-color: green;
+} */
+/* h2~*{
+    background-color: blue;
+} */
+
+/*
+    On peut sélectionner un attribut 
+    en mettant le nom de l'attribut entre crochet
+*/
+[presentation] p{
+    color:teal;
+}
+[type="text"]{
+    border:5px solid pink;
+}
+/*
+    On peut sélectionner plusieurs éléments pour lesquels
+    on veut utiliser le même style. Pour ce faire,
+    on utilise le sélecteur multiple ','
+*/
+h1, h2, h3, h4, h5, h6{
+    color:yellow;
+}
+/*
+    Les pseudo-éléments sont des sélecteurs qui permettent
+    de cibler certaines parties d'éléments comme le placeholder,
+    les puces des listes, ... 
+    On peut ainsi modifier la taille ou d'autres propriétés
+    de ces parties
+*/
+[type="text"]::placeholder{
+    color:pink;
+}
+::marker{
+    color:yellow;
+}
+/*
+    Les pseudo-classes permettent de modifier 
+    un élément suivant son état:
+    lorsqu'on passe dessus, cliqué, coché, ...
+*/
+li:hover{
+    color:seashell;
+}
+
+li:nth-child(odd){
+    font-size:40px;
+}
+
