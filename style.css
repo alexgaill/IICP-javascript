@@ -1,0 +1,56 @@
+h2{
+    color:blue;
+}
+li{
+    color: crimson;
+}
+/* 
+    .bleu permet d'appeler la class="bleu"
+    Une class peut être ajoutée à plusieurs éléments 
+    afin qu'ils aient tous le même style
+*/
+.bleu{
+    color:blue;
+}
+/* 
+    #rouge permet d'appeler id="rouge"
+    Un id est unique et ne doit se retrouver 
+    que sur un seul élément d'une page
+*/
+#rouge{
+    /* color:rgb(0, 255, 255); */
+    color: #000000
+    /* 
+        L'hexadecimal est constitué des 3 couleurs primaires
+        Chaque couleur est représentée par 2 valeurs:
+        # 00(red) 00(green) 00(blue)
+        Chaque chiffre peut aller de 0 à F ce qui représente 16 choix de valeur
+        16*16=256 donc on est sur le même nombre de valeur 
+        qu'en RGB (de 0 à 255) soit 256 valeurs
+    */
+}
+
+/* On commente grâce aux / et * */
+/*
+p{
+    color:orange
+}
+*/
+/* 
+    * est le sélecteur global. Il sélectionne tous les éléments 
+    et leur donne le style indiqué
+*/
+*{
+    font-size:20px;
+}
+
+div p{
+    font-size: 13px;
+}
+img{
+    width: 50%;
+    height: 300px;
+}
+#demi {
+    width: 50%;
+}
